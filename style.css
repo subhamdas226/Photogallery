@@ -1,0 +1,270 @@
+header
+{
+	height: 112px;
+	//background: #333;
+	line-height: 112px;
+	position: fixed;
+	color: #fff;
+	z-index: 2;
+	width: 100%;
+}
+
+header .logo
+{
+	font-size: 36px;
+}
+
+header #menu
+{
+	width: 200px;
+}
+
+header ul
+{
+	width: 100%;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+header ul li
+{
+	height: 3em;
+	line-height: 3em;
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	border-top: 1px solid rgba(0,0,0,0.2);
+}
+
+header a
+{
+	color: #fff;
+}
+
+.login a , .register a, .logout a
+{
+	padding:0;
+	padding: 5px 20px;
+	border-radius: 3px;
+}
+
+nav ul
+{
+	background-color: rgba(0,0,0,0.5);
+}
+
+/*** slider styles ***/
+
+.slider
+{
+	width: 100%;
+	height: 700px;
+	position: relative;
+	background: url('img/slider-img.jpeg');
+	background-size: 100% 100%;
+}
+
+canvas
+{
+	display: block;
+}
+
+#particles
+{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.8);
+}
+
+.slider .slider-content
+{
+	position: absolute;
+	top: 20%;
+	width: 100%;
+}
+
+.slider-content h1
+{
+	top: 25%;
+}
+
+.slider-content .text-rotator
+{
+	font-size: 48px;
+}
+
+.slider-content .call-to-action
+{
+	margin-top: 40px;
+}
+
+.slider-content a.cta
+{
+	font-size: 24px;
+}
+
+/****** form styling *****/
+
+form
+{
+	width: 50%;
+	margin: 0 auto;
+	margin-top: 40px;
+}
+
+form input, form textarea
+{
+	display: block;
+	margin-bottom: 40px;
+	width: 100%;
+	padding-left: 20px;
+}
+
+form textarea
+{
+	padding-top: 10px;
+}
+
+form input
+{
+	height: 40px;
+}
+
+input[type=submit]
+{
+	width: 30%;
+	text-align: center;
+	padding: 0;
+}
+
+/*** for profile info section ***/
+
+.profile-information
+{
+	margin-top:30px;
+}
+
+/*** for user gallery */
+
+#user-uploaded-pics img, #unapproved_pics img
+{
+	width: 100%;
+	height: 265px;
+}
+
+/** gallery image **/
+
+.gallery-image
+{
+	position: relative;
+	width: 100%;
+	height: 300px;
+}
+
+.gallery-image .front
+{
+	width: 100%;
+	height: 100%;
+	transition:all 1s ease;
+	transform:rotateY(0deg);
+	backface-visibility:hidden;
+}
+
+.gallery-image .back
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	background-color: #000;
+	color: #fff;
+	transition:all 1s ease;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+}
+
+.gallery-image .back .back-content
+{
+	width: 70%;
+	height: 70%;
+	//border: 1px solid #333;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+	text-align: center;
+}
+
+.back-content:before,.back-content:after
+{
+	position: absolute;
+	content: '';
+	width: 0%;
+	height: 0%;
+	border:2px solid transparent;
+	z-index: -2;
+}
+
+.back-content:before
+{
+	top: 0;
+	left: 0;
+}
+
+.back-content:after
+{
+	bottom: 0;
+	right: 0;
+}
+
+.gallery-image:hover .back-content:before
+{
+	width: 100%;
+	height: 100%;
+	border-top-color: #fff;
+	border-right-color: #fff;
+	transition:width 0.2s ease 0.5s,height 0.20s ease 0.7s;
+}
+
+.gallery-image:hover .back-content:after
+{
+	width: 100%;
+	height: 100%;
+	border-bottom-color: #fff;
+	border-left-color: #fff;
+	transition:0.01s border-color 0.9s,width 0.20s ease 0.9s,height 0.20s ease 1.1s;
+}
+
+.gallery-image:hover .front
+{
+	transform:rotateY(180deg);
+}
+.gallery-image:hover .back
+{
+	transform:rotateY(0deg);
+}
+
+#pagination
+{
+	margin: 24px 0;
+}
+
+#pagination a
+{
+	color: #d35400;
+	padding: 5px 15px;
+	border:1px solid #d35400;
+}
+
+#pagination a:hover
+{
+	background-color: #d35400;
+	color: #fff;
+}
+
+.gallery-content
+{
+	margin: 24px 0;
+}
+
